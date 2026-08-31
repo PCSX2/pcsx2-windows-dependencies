@@ -21,10 +21,11 @@ jobs:
       with:
         repository: "PCSX2/pcsx2-windows-dependencies"
         path: deps-repo
+        
     - name: Build Dependencies
       shell: cmd
       run: |
-        start /w .github\workflows\scripts\windows\build-dependencies.bat
+        call .github\workflows\scripts\windows\build-dependencies.bat
 
     - name: Create Dependencies Archive
       shell: cmd
